@@ -2,7 +2,7 @@
   "$schema": "https://www.raycast.com/schemas/extension.json",
   "name": "tap-bpm",
   "title": "Tap BPM",
-  "description": "Allows the user to tap on their keyboard or mouse to quickly find the Beats Per Minute of a song (or anything else!).",
+  "description": "Tap your enter key to quickly get the tempo of a song (or anything else!).",
   "icon": "command-icon.png",
   "author": "nickharrison",
   "categories": [

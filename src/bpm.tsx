@@ -10,7 +10,8 @@ interface Preferences {
 export default function Command() {
     const preferences = getPreferenceValues<Preferences>();
     const [count, setCount] = useState(0);
-    const [taps, setTaps] = useState<number>(0);
+    const [taps, setTaps] = useState(0);
+    const [staleTaps, setStaleTaps] = useState(0);
     const [timeElapsed, setTimeElapsed] = useState(0);
     const [resetTimer, setResetTimer] = useState(0);
     const [bpm, setBPM] = useState((0).toFixed(preferences.bpmDecimalPlaces));
@@ -59,6 +60,7 @@ export default function Command() {
         }
 
         setTaps(newTaps);
+        setStaleTaps(newTaps);
         setCount(d.valueOf());
         setResetTimer(0);
     }, [taps]);
@@ -70,7 +72,7 @@ export default function Command() {
                 <Detail.Metadata>
                     <Detail.Metadata.Label 
                         title="Beats"
-                        text={taps.toString()}
+                        text={(taps || staleTaps).toString()}
                     />
                     <Detail.Metadata.Label
                         title="MS per Beat"

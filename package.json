@@ -14,9 +14,88 @@
     {
       "name": "bpm",
       "title": "Tap BPM",
-      "subtitle": "Tap BPM",
+      "subtitle": "",
       "description": "Pulls up an interface allowing the user to quickly tap out a BPM.",
-      "mode": "view"
+      "mode": "view",
+      "preferences": [
+        {
+          "name": "resetTimer",
+          "title": "Reset Timer",
+          "label": "Reset Timer",
+          "default": "2",
+          "required": false,
+          "description": "BPM will reset on next tap after n seconds of inactivity",
+          "type": "dropdown",
+          "data": [
+            {
+              "title": "1 seconds",
+              "value": "1"
+            },
+            {
+              "title": "2 seconds",
+              "value": "2"
+            },
+            {
+              "title": "3 seconds",
+              "value": "3"
+            },
+            {
+              "title": "5 seconds",
+              "value": "5"
+            }
+          ]
+        },
+        {
+          "name": "bpmDecimalPlaces",
+          "title": "BPM value decimal places",
+          "label": "BPM value decimal places",
+          "default": "1",
+          "required": false,
+          "description": "Number of decimal places to display after the BPM",
+          "type": "dropdown",
+          "data": [
+            {
+              "title": "0 decimal places",
+              "value": "0"
+            },
+            {
+              "title": "1 decimal places",
+              "value": "1"
+            },
+            {
+              "title": "2 decimal places",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "name": "perBeatDecimalPlaces",
+          "title": "MS-per-Beat value decimal places",
+          "label": "MS-per-Beat value decimal places",
+          "default": "2",
+          "required": false,
+          "description": "Number of decimal places to display after the MS-per-Beat value",
+          "type": "dropdown",
+          "data": [
+            {
+              "title": "0 decimal places",
+              "value": "0"
+            },
+            {
+              "title": "1 decimal places",
+              "value": "1"
+            },
+            {
+              "title": "2 decimal places",
+              "value": "2"
+            },
+            {
+              "title": "3 decimal places",
+              "value": "3"
+            }
+          ]
+        }
+      ]
     }
   ],
   "dependencies": {

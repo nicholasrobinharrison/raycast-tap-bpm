@@ -8,4 +8,4 @@ OK so a song is playing. If you're like me, you want to know the BPM for some re
 
 ---
 
-Logo uses the *drum* icon from [Font-Awesome](https://github.com/FortAwesome/Font-Awesome)
+Logo uses the *drum* icon from [Font-Awesome](https://github.com/FortAwesome/Font-Awesome). Thank you!

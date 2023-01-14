@@ -1,0 +1,42 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "tap-bpm",
+  "title": "Tap BPM",
+  "description": "Allows the user to tap on their keyboard or mouse to quickly find the Beats Per Minute of a song (or anything else!).",
+  "icon": "command-icon.png",
+  "author": "nickharrison",
+  "categories": [
+    "Fun",
+    "Other"
+  ],
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "bpm",
+      "title": "Tap BPM",
+      "subtitle": "Tap BPM",
+      "description": "Pulls up an interface allowing the user to quickly tap out a BPM.",
+      "mode": "view"
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.45.3"
+  },
+  "devDependencies": {
+    "@types/node": "18.8.3",
+    "@types/react": "18.0.9",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "prettier": "^2.5.1",
+    "typescript": "^4.4.3"
+  },
+  "scripts": {
+    "build": "ray build -e dist",
+    "dev": "ray develop",
+    "fix-lint": "ray lint --fix",
+    "lint": "ray lint",
+    "publish": "ray publish"
+  }
+}

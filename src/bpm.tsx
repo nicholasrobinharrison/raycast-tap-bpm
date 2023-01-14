@@ -32,7 +32,7 @@ export default function Command() {
 
     useEffect(() => {
         let interval: any;
-        
+
         if (resetTimer >= preferences.resetTimer) {
             reset();
         }
@@ -47,7 +47,7 @@ export default function Command() {
     }, [taps, resetTimer]);
 
     const onTap = useCallback(() => {
-        let newTaps = taps + 1;
+        const newTaps = taps + 1;
         const d = new Date();
         const increment = timeElapsed + (d.valueOf() - count);
 
@@ -70,16 +70,10 @@ export default function Command() {
             markdown={`# ${bpm}`}
             metadata={
                 <Detail.Metadata>
-                    <Detail.Metadata.Label 
-                        title="Beats"
-                        text={(taps || staleTaps).toString()}
-                    />
+                    <Detail.Metadata.Label title="Beats" text={(taps || staleTaps).toString()} />
+                    <Detail.Metadata.Label title="MS per Beat" text={perBeat} />
                     <Detail.Metadata.Label
-                        title="MS per Beat"
-                        text={perBeat}
-                    />
-                    <Detail.Metadata.Label
-                        title={`BPM reset: ${preferences.resetTimer} seconds`} 
+                        title={`Auto Reset: ${preferences.resetTimer}s`}
                         text="(or hit shift + 'r')"
                     />
                     <Detail.Metadata.Label
@@ -89,20 +83,16 @@ export default function Command() {
             }
             actions={
                 <ActionPanel>
+                    <Action title="Tap" onAction={onTap} icon={Icon.Heartbeat} />
                     <Action
-                        title="Tap"
-                        onAction={onTap}
-                        icon={Icon.Heartbeat}
-                    />
-                    <Action 
                         title="Reset"
                         shortcut={{ modifiers: ["shift"], key: "r" }}
                         onAction={reset}
                         icon={Icon.ArrowCounterClockwise}
                     />
-                    <Action 
+                    <Action
                         title="Preferences"
-                        shortcut={{ modifiers: ["shift"], key: '/' }}
+                        shortcut={{ modifiers: ["shift"], key: "/" }}
                         onAction={openCommandPreferences}
                         icon={Icon.Gear}
                     />

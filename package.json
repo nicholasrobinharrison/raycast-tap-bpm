@@ -14,7 +14,6 @@
     {
       "name": "bpm",
       "title": "Tap BPM",
-      "subtitle": "",
       "description": "Pulls up an interface allowing the user to quickly tap out a BPM.",
       "mode": "view",
       "preferences": [

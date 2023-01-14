@@ -87,7 +87,7 @@ export default function Command() {
                     <Action
                         title="Reset"
                         shortcut={{ modifiers: ["shift"], key: "r" }}
-                        onAction={reset}
+                        onAction={() => setResetTimer(preferences.resetTimer)}
                         icon={Icon.ArrowCounterClockwise}
                     />
                     <Action

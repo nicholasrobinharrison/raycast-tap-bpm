@@ -35,7 +35,7 @@ Rounds: ${preferences.rounds}
         markdown={markdown}
         actions={
             <ActionPanel>
-                <Action.OpenInBrowser url={`http://localhost:3033/fun/bpm?mode=${preferences.mode}&rounds=${preferences.rounds}&enter_fullscreen=true&start_game=true`} />
+                <Action.OpenInBrowser url={`http://nickharrison.me/fun/bpm?mode=${preferences.mode}&rounds=${preferences.rounds}&enter_fullscreen=true&start_game=true`} />
                     <Action
                         title="Preferences"
                         shortcut={{ modifiers: ["shift"], key: "/" }}

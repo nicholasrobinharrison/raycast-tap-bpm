@@ -95,61 +95,6 @@
           ]
         }
       ]
-    },
-    {
-      "name": "bpmgame",
-      "title": "Guess The BPM",
-      "subtitle": "Browser Game",
-      "description": "Guess the BPM of each song, and strive for perfection.",
-      "mode": "view",
-      "preferences": [
-        {
-          "name": "mode",
-          "title": "Game Difficulty",
-          "label": "Game Difficulty",
-          "description": "Harder game include tracks with less identifiable beats",
-          "default": "m",
-          "required": false,
-          "type":"dropdown",
-          "data": [
-            {
-              "title": "easy",
-              "value": "e"
-            },
-            {
-              "title": "medium",
-              "value": "m"
-            },
-            {
-              "title": "hard",
-              "value": "h"
-            }
-          ]
-        },
-        {
-          "name": "rounds",
-          "title": "Game Length (Rounds)",
-          "label": "Game Length (Rounds)",
-          "description": "Change the game length (number of songs)",
-          "default": "6",
-          "required": false,
-          "type":"dropdown",
-          "data": [
-            {
-              "title": "4 Songs",
-              "value": "4"
-            },
-            {
-              "title": "6 Songs",
-              "value": "6"
-            },
-            {
-              "title": "8 Songs",
-              "value": "8"
-            }
-          ]
-        }
-      ]
     }
   ],
   "dependencies": {
